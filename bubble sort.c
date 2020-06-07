@@ -21,3 +21,5 @@ int main()
     printf("\n");
     return 0;
 }
+
+// time complixty O(n ^ 2)
