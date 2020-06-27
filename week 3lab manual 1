@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int arr[]={1, 2, 3, 3, 3, 4, 4, 5};
+    int key=3;
+    int i;
+    int flg=-1;
+    for(i=0;i<=7;i++)
+    {
+        if(arr[i]==key)
+        {
+            flg=i;
+        }
+    }
+    if(flg==-1)
+    printf("Item not found\n");
+   else
+    printf("Last occurrence: %d\n",flg);
+    return 0;
+}
