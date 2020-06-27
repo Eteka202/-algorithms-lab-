@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n,temp;
+    double sum=0;
+    printf("Enter array size:\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter data:\n");
+    for(i=0; i<n; i++)
+   {
+       scanf("%d",&arr[i]);
+       sum+=arr[i];
+     }
+
+    for(i=0;i<n;i++)
+    {
+        j = i;
+
+        while(j>0)
+        {
+            if(arr[j-1] > arr[j])
+            {
+                temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+            }
+            else
+            {
+                break;
+            }
+            j--;
+        }
+    }
+      printf("Assending order:\n");
+    for(i=0;i<n;i++)
+        printf(" %d\n",arr[i]);
+    printf("\n");
+    printf("Avg %lf\n",sum/n);
+
+    return 0;
+}
