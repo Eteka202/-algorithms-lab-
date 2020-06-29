@@ -1,15 +1,19 @@
+
+#include<stdio.h>
+
 int main()
 {
     int i,j,n,temp;
-    printf("Enter array size:\n");
+    printf("Enter Array Size: ");
     scanf("%d",&n);
     int arr[n];
-    printf("Enter data:\n");
+    printf("Enter Data: ");
+
     for(i=0; i<n; i++)
    {
        scanf("%d",&arr[i]);
-     }
 
+     }
 
     for(i=0;i<n;i++)
     {
@@ -30,9 +34,11 @@ int main()
             j--;
         }
     }
-      printf("Assending order:\n");
-    for(i=0;i<n;i++)
-        printf(" %d\n",arr[i]);
+    printf("Ascending Order: ");
+    for(i=0; i<n; i++)
+    printf("%d ",arr[i]);
+    printf("\n");
+    printf("Difference btwn max-min= %d\n",arr[n-1]-arr[0]);
 
     return 0;
 }
