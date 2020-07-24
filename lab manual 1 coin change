@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+int main(  ){
+	int change, k = 4;
+	int coin[ ] = {1, 2, 8, 12};
+	scanf("%d", &change);
+	int dp[change + 1];
+	memset(dp, 0, sizeof(dp));
+	for(int j = 1; j <= change; j++){
+		int minimum = (int) 1e7;
+		for(int i = 0; i < k; i++)
+			if(j >= coin[i])
+				minimum = minimum < 1 + dp[j - coin[i]] ? minimum: 1 + dp[j - coin[i]];
+		dp[j] = minimum;
+	}
+	printf("%d\n", dp[change]);
+	return 0;
+}
