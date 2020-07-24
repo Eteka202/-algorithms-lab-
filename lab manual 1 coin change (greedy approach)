@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main( ){
+    int change, coin[ ] = {1,7,7,10};
+    printf("Change Amount: ");
+    scanf("%d", &change);
+    printf("Coin Need: \n");
+    for(int i = 3; i >= 0; i--)
+        if(change >= coin[i]){
+            int cnt = 0;
+            while(change >= coin[i]){
+                ++cnt;
+                change -= coin[i];
+            }
+            printf("%d coin %d times\n", coin[i], cnt);
+        }
+    return 0;
+}
