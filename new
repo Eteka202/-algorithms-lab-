@@ -1,0 +1,6 @@
+#include<stdio.h>
+int main()
+{
+    printf("ppt");
+    return 0;
+}
