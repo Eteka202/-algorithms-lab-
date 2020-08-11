@@ -1,5 +1,6 @@
 #include<stdio.h>
 void DFS(int);
+//time complixity is :(n+1)//
 int G[10][10],visited[10],n;
 void DFS(int i){
     int j;
